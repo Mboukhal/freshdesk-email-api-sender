@@ -2,9 +2,9 @@
 import requests
 
 filename = 'emails.txt'
-domain = 'lio-support'
-api_key = 'LrMouVFEnodY2LfefTBo'
-user_email = 'support@lio-support.freshdesk.com'
+domain = '***-support'
+api_key = '***'
+user_email = 'support@***-support.freshdesk.com'
 subject = 'ok'
 description = 'Details about the issue...'
 
@@ -18,7 +18,7 @@ json_data = {
 
 headers = {}							# you can add your own headers
 
-def send_mail(domain, api_key, email_list,json_data, headers):
+def send_mail(domain, api_key, email_list, json_data, headers):
 	json_data['cc_emails'] = email_list
 	res = requests.post(f'https://{domain}.freshdesk.com/api/v2/tickets',
 							headers=headers, json=json_data, auth=(api_key, 'X'))
