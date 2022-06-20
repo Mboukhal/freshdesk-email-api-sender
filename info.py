@@ -1,6 +1,0 @@
-filename = 'emails.txt'
-domain = '**-support'
-api_key = '***'
-user_email = 'support@***-support.freshdesk.com'
-subject = 'ok'
-description = 'Details about the issue...'
