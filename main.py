@@ -8,20 +8,24 @@ user_email = 'support@lio-support.freshdesk.com'
 subject = 'ok'
 description = 'Details about the issue...'
 
-json_data = {
+# you can add more option 
+# by adding parameters from link:
+# https://developers.freshdesk.com/api/#tickets
+data = {
 	'description': description,
 	'subject': subject,
 	'email': user_email,
 	'priority': 1,
 	'status': 2,
+	'source': 2,
 }
 
 headers = {}							# you can add your own headers
 
-def send_mail(domain, api_key, email_list, json_data, headers):
-	json_data['cc_emails'] = email_list
+def send_mail(domain, api_key, email_list, data, headers):
+	data['cc_emails'] = email_list
 	res = requests.post(f'https://{domain}.freshdesk.com/api/v2/tickets',
-							headers=headers, json=json_data, auth=(api_key, 'X'))
+							headers=headers, json=data, auth=(api_key, 'X'))
 	if res.status_code == 201:
 		print('Email send success.')
 	else:
@@ -35,4 +39,4 @@ def get_list(filename):
 
 if __name__ == '__main__':
 	email_list = get_list(filename)
-	send_mail(domain, api_key, email_list, json_data, headers)
+	send_mail(domain, api_key, email_list, data, headers)
