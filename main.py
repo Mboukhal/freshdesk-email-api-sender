@@ -20,7 +20,8 @@ data = {
 	'source': 2,
 }
 
-headers = {}							# you can add your own headers
+# you can add your own headers
+headers = {}
 
 def send_mail(domain, api_key, email_list, data, headers):
 	data['cc_emails'] = email_list
