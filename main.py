@@ -2,9 +2,9 @@
 import requests
 
 filename = 'emails.txt'
-domain = '***-support'
+domain = 'lio-support'
 api_key = '*****************'
-user_email = 'support@***-support.freshdesk.com'
+user_email = 'support@lio-support.freshdesk.com'
 subject = 'ok'
 description = 'Details about the issue...'
 
