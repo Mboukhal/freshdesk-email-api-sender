@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 import requests
 
-filename = 'emails.txt'
+################################################
+#     Authentification for more see images 
+################################################
 domain = 'lio-support'
 api_key = '*****************'
 user_email = 'support@lio-support.freshdesk.com'
-subject = 'ok'
-description = 'Details about the issue...'
+################################################
+filename = 'emails_file.txt'
+subject = 'Text'
+description = 'Your message in html format ...'
 
 # you can add more option 
 # by adding parameters from link:
