@@ -4,9 +4,9 @@ import requests
 ################################################
 #     Authentification for more see images 
 ################################################
-domain = 'lio-support'
+domain = '*******'
 api_key = '*****************'
-user_email = 'support@lio-support.freshdesk.com'
+user_email = f'support@{domene}.freshdesk.com'
 ################################################
 filename = 'emails_file.txt'
 subject = 'Text'
